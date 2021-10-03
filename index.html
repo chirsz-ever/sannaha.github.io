@@ -151,35 +151,6 @@
                     return;
                 }
                 loadintT.innerHTML = 'loading......' + parseInt(tempSeconds) + '%';
-
-                switch (tempSeconds) {
-                    case 20:
-                        updateLabView(0.2);
-                        break;
-                    case 40:
-                        updateLabView(0.3);
-                        break;
-                    case 60:
-                        updateLabView(0.4);
-                        break;
-                    case 96:
-                        updateLabView(5);
-                        break;
-                    case 97:
-                        updateLabView(10);
-                        break;
-                    case 98:
-                        updateLabView(50);
-                        break;
-                    case 99:
-                        updateLabView(100);
-                        break;
-                    default:
-                        if (tempSeconds >= 80 && tempSeconds < 96) {
-                            updateLabView(t + 0.1);
-                        }
-                        break;
-                }
                 if (tempSeconds > 100) {
                     clearInterval(timer);
                     tempSeconds = 100
